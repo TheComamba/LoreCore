@@ -3,6 +3,7 @@ set -e
 
 if ! command -v cargo &> /dev/null
 then
+    sudo apt-get install curl
     echo Installing rust...
     sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fi
